@@ -1,0 +1,37 @@
+{
+  "name": "tolltrack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TollTrack MVP - toll trip logging and statement matching for small transport fleets",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "db:setup": "node scripts/db-setup.mjs"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.0.18",
+    "bcryptjs": "^2.4.3",
+    "next": "^14.2.35",
+    "postgres": "^3.4.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "server-only": "^0.0.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  }
+}

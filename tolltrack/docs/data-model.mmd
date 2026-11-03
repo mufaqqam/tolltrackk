@@ -1,0 +1,70 @@
+erDiagram
+  USERS ||--o{ SESSIONS : "signs in with"
+  USERS ||--o{ TRIPS : "logs (driver)"
+  USERS ||--o{ RUNSHEETS : "submits (driver)"
+  USERS ||--o{ STATEMENT_UPLOADS : "uploads (admin)"
+  USERS ||--o{ AUDIT_LOG : "is recorded in"
+  RUNSHEETS |o--|{ TRIPS : "groups a day of (once submitted)"
+  TOLL_ROADS ||--|{ TOLL_POINTS : has
+  TOLL_POINTS ||--o{ TRIPS : "entry / exit"
+  STATEMENT_UPLOADS ||--|{ STATEMENT_CHARGES : contains
+  TRIPS ||--o| STATEMENT_CHARGES : "matched to"
+
+  USERS { bigint id PK
+    text role "driver | admin"
+    text driver_no UK
+    text email UK
+    text secret_hash "bcrypt"
+    text truck_rego
+    text toll_account }
+  TRIPS { bigint id PK
+    bigint driver_id FK
+    date trip_date
+    text job_number
+    text toll_account
+    text truck_rego
+    text pickup_address
+    text dropoff_address
+    int entry_point_id FK
+    int exit_point_id FK
+    int suggested_entry_id FK
+    int suggested_exit_id FK
+    smallint confidence
+    bool needs_check
+    bigint runsheet_id FK }
+  RUNSHEETS { bigint id PK
+    bigint driver_id FK
+    date sheet_date
+    int trip_count
+    timestamptz submitted_at }
+  TOLL_ROADS { smallint id PK
+    text name }
+  TOLL_POINTS { int id PK
+    smallint road_id FK
+    text name
+    numeric km
+    float lat
+    float lng
+    text_array entry_dirs
+    text_array exit_dirs }
+  STATEMENT_UPLOADS { bigint id PK
+    bigint uploaded_by FK
+    text filename
+    int row_count }
+  STATEMENT_CHARGES { bigint id PK
+    bigint upload_id FK
+    date charge_date
+    text plate
+    text road_name
+    text entry_name
+    text exit_name
+    int amount_cents
+    text match_status "matched | check | unmatched"
+    bigint matched_trip_id FK }
+  SESSIONS { text token_hash PK
+    bigint user_id FK
+    timestamptz expires_at }
+  AUDIT_LOG { bigint id PK
+    bigint user_id FK
+    text action
+    jsonb detail }

@@ -1,0 +1,49 @@
+{
+  "_note": "Point names follow Linkt's published CityLink and West Gate Tunnel toll point lists (July-Sept 2026) and EastLink's interchange list. Coordinates are approximate (about 300-800 m) and positions (km) are approximate distances along each road. 'inc' = travelling in the direction of increasing km: CityLink south-east (airport to Toorak Rd), EastLink south (Ringwood to Frankston), West Gate east (West Gate Fwy to the tunnel). Verify coordinates before production use.",
+  "roads": [
+    { "id": 1, "name": "CityLink" },
+    { "id": 2, "name": "EastLink" },
+    { "id": 3, "name": "West Gate Tunnel" }
+  ],
+  "points": [
+    { "id": 101, "road": 1, "name": "Tullamarine Fwy / Bell St / Moreland Rd / Pascoe Vale Rd", "km": 0.0, "lat": -37.7405, "lng": 144.9175, "entry": ["inc"], "exit": ["dec"] },
+    { "id": 102, "road": 1, "name": "Racecourse Rd", "km": 4.5, "lat": -37.7868, "lng": 144.9362, "entry": ["inc"], "exit": ["dec"] },
+    { "id": 103, "road": 1, "name": "Brunswick Rd / Flemington Rd", "km": 5.4, "lat": -37.7890, "lng": 144.9440, "entry": ["dec"], "exit": ["inc"] },
+    { "id": 104, "road": 1, "name": "Dynon Rd / Footscray Rd", "km": 7.8, "lat": -37.8060, "lng": 144.9285, "entry": ["dec"], "exit": ["inc"] },
+    { "id": 105, "road": 1, "name": "Footscray Rd", "km": 8.4, "lat": -37.8105, "lng": 144.9255, "entry": ["inc"], "exit": ["dec"] },
+    { "id": 106, "road": 1, "name": "Bolte Bridge / West Gate Fwy / Kings Way / Power St", "km": 10.5, "lat": -37.8250, "lng": 144.9450, "entry": ["dec"], "exit": ["inc"] },
+    { "id": 107, "road": 1, "name": "Domain Tunnel / West Gate Fwy / Kings Way", "km": 11.2, "lat": -37.8290, "lng": 144.9585, "entry": [], "exit": ["dec"] },
+    { "id": 108, "road": 1, "name": "Burnley Tunnel / West Gate Fwy / Kings Way", "km": 11.2, "lat": -37.8292, "lng": 144.9590, "entry": ["inc"], "exit": [] },
+    { "id": 109, "road": 1, "name": "Exhibition St Extension", "km": 13.0, "lat": -37.8205, "lng": 144.9745, "entry": ["inc"], "exit": ["dec"] },
+    { "id": 110, "road": 1, "name": "Swan St", "km": 14.0, "lat": -37.8255, "lng": 144.9895, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 111, "road": 1, "name": "Punt Rd", "km": 14.6, "lat": -37.8305, "lng": 144.9840, "entry": ["inc"], "exit": ["dec"] },
+    { "id": 112, "road": 1, "name": "Church St", "km": 15.2, "lat": -37.8310, "lng": 144.9990, "entry": [], "exit": ["inc"] },
+    { "id": 113, "road": 1, "name": "Gibdon St", "km": 16.0, "lat": -37.8268, "lng": 145.0075, "entry": ["dec"], "exit": [] },
+    { "id": 114, "road": 1, "name": "Burnley St (Yarra Boulevard)", "km": 16.3, "lat": -37.8300, "lng": 145.0090, "entry": ["inc"], "exit": ["dec"] },
+    { "id": 115, "road": 1, "name": "Burnley St / Burnley Tunnel", "km": 16.4, "lat": -37.8305, "lng": 145.0095, "entry": [], "exit": ["inc"] },
+    { "id": 116, "road": 1, "name": "Monash Fwy / Toorak Rd", "km": 18.2, "lat": -37.8420, "lng": 145.0275, "entry": ["dec"], "exit": ["inc"] },
+
+    { "id": 201, "road": 2, "name": "Springvale Rd / Eastern Fwy", "km": 0.0, "lat": -37.8040, "lng": 145.1775, "entry": ["inc"], "exit": ["dec"] },
+    { "id": 202, "road": 2, "name": "Ringwood Bypass", "km": 3.9, "lat": -37.8110, "lng": 145.2125, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 203, "road": 2, "name": "Maroondah Hwy", "km": 4.4, "lat": -37.8175, "lng": 145.2150, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 204, "road": 2, "name": "Canterbury Rd", "km": 6.1, "lat": -37.8330, "lng": 145.2150, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 205, "road": 2, "name": "Boronia Rd", "km": 7.6, "lat": -37.8470, "lng": 145.2140, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 206, "road": 2, "name": "Burwood Hwy", "km": 9.3, "lat": -37.8625, "lng": 145.2115, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 207, "road": 2, "name": "High Street Rd", "km": 11.1, "lat": -37.8790, "lng": 145.2070, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 208, "road": 2, "name": "Ferntree Gully Rd", "km": 14.0, "lat": -37.9030, "lng": 145.2010, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 209, "road": 2, "name": "Wellington Rd", "km": 16.5, "lat": -37.9240, "lng": 145.1995, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 210, "road": 2, "name": "Police Rd", "km": 18.1, "lat": -37.9380, "lng": 145.1950, "entry": ["dec"], "exit": ["inc"] },
+    { "id": 211, "road": 2, "name": "Monash Fwy", "km": 18.9, "lat": -37.9455, "lng": 145.1885, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 212, "road": 2, "name": "Princes Hwy", "km": 21.5, "lat": -37.9685, "lng": 145.1790, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 213, "road": 2, "name": "Cheltenham Rd", "km": 24.3, "lat": -37.9930, "lng": 145.1715, "entry": ["dec"], "exit": ["inc"] },
+    { "id": 214, "road": 2, "name": "Dandenong Bypass", "km": 25.3, "lat": -38.0015, "lng": 145.1695, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 215, "road": 2, "name": "Greens Rd", "km": 26.5, "lat": -38.0115, "lng": 145.1700, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 216, "road": 2, "name": "Thompson Rd", "km": 33.1, "lat": -38.0700, "lng": 145.1650, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 217, "road": 2, "name": "Mornington Peninsula Fwy", "km": 36.9, "lat": -38.0950, "lng": 145.1550, "entry": ["dec"], "exit": ["inc"] },
+    { "id": 218, "road": 2, "name": "Frankston Fwy", "km": 38.5, "lat": -38.0974, "lng": 145.1452, "entry": ["dec"], "exit": ["inc"] },
+
+    { "id": 301, "road": 3, "name": "West Gate Freeway", "km": 0.0, "lat": -37.8310, "lng": 144.8820, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 302, "road": 3, "name": "Hyde St", "km": 2.6, "lat": -37.8205, "lng": 144.9030, "entry": ["inc", "dec"], "exit": ["inc", "dec"] },
+    { "id": 303, "road": 3, "name": "West Gate Tunnel", "km": 4.2, "lat": -37.8105, "lng": 144.9140, "entry": ["inc", "dec"], "exit": ["inc", "dec"] }
+  ]
+}
