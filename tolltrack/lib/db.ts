@@ -11,10 +11,22 @@ declare global {
 }
 
 function create() {
-  const url = process.env.DATABASE_URL;
-  if (!url) throw new Error("DATABASE_URL is not set");
-  const local = /localhost|127\.0\.0\.1/.test(url);
-  return postgres(url, {
+  // Clean up copy-paste accidents: spaces, line breaks or quote marks around the value.
+  const raw = (process.env.DATABASE_URL ?? "").trim().replace(/^['"]+|['"]+$/g, "").trim();
+  if (!raw) throw new Error("DATABASE_URL is not set");
+  const u = new URL(raw);
+  const opts = {
+    host: u.hostname,
+    port: Number(u.port || 5432),
+    user: decodeURIComponent(u.username),
+    password: decodeURIComponent(u.password),
+    database: decodeURIComponent(u.pathname.replace(/^\//, "")) || "postgres",
+  };
+  const local = /^(localhost|127\.0\.0\.1)$/.test(opts.host);
+  // Safe to log: shows what we connect to, never the password.
+  console.log("[db] connecting", { host: opts.host, port: opts.port, user: opts.user, database: opts.database });
+  return postgres({
+    ...opts,
     prepare: false,
     ssl: local ? false : "require",
     max: local ? 5 : 3,
